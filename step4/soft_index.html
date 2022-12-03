@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>6-02_drawer</title>
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheet">
+<link href="css/special.css" rel="stylesheet">
+<style>
+    body
+    {
+     margin:0px;          
+     padding:0px;         
+     text-align:center;   
+    }
+    .sidebar{
+        text-align: left;
+    }
+    .submenu h3 {
+        margin: 0 0 1em 0;
+        font-size: 16px;
+        cursor: pointer;
+        color: #e154f1;
+    }
+    .submenu h3:hover {
+        color: #e7fb0b;
+        text-decoration: underline;
+    }
+    .submenu ul {
+        margin: 0 0 1em 0;
+        list-style-type: none;
+        font-size: 14px;
+    }
+    .submenu ul ul{
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    
+    
+</style>
+</head>
+<!-- <div class="background">
+    <img src="shizuoka-jpg-1654759074.jpeg">
+</div> -->
+<!-- <div class="header">
+    <img src="pic01-3.png">
+</div> -->
+<div id="wrapper">
+  <header>
+    <div class="hamburger" id="open_nav">
+        <!-- <img src="hamburger.png" alt=""> -->
+            <button class="hamburger">
+                <span class="hamburger_bar"></span>
+                <span class="hamburger_bar"></span>
+                <span class="hamburger_bar"></span>
+              </button>
+      </div> 
+    
+    <div class="container">
+        <form>
+            <select onChange="location.href=value;">
+                <option value="hard_index.html">ハードウェア</option>
+                <option value="soft_index.html">ソフトウェア</option>
+                <option value="index.html">トップに戻る</option>
+             </select>
+         </form>
+     
+        <div class="title-block">
+            <h1 style="text-align: center;">soft_index test</h1>
+            <h1 style="text-align:center">Inventory control</h1>
+            <h2  style="text-align:center">注文、管理、会計処理を一括化！</h2>
+            <h2 style="text-align:center">日常の一手間中にちょっとしたブレイクタイムを築こう！</h2>            
+         
+                <div class="button_solid006">
+                  <a href="sam_index.html">building materials</a>
+                  <a href="lum_index.html">food</a>
+                  <a href="#">請求元</a>
+                  <a href="#">収支詳細</a>
+            </div>
+
+           
+
+       
+      </div><!-- /.container -->
+   
+  </header>
+    <main>
+   
+        <div class="sidebar">
+            <h2>はじめに</h2>
+            <div class="submenu">
+                <h3>1. システムに登録する</h3>
+                <ul class="hidden">
+                    <li><a href=" gaiyou_index.html">- 概要</a></li>
+                    <li><a href="">- インストールする</a></li>
+                    <li><a href="login.html">- アカウントを登録する</a></li>
+                    </ul>
+            </div>
+            <div class="submenu">
+                <h3>2. 基本的な使い方</h3>
+                <ul class="hidden">
+                    <li><a href="">- 基本的な操作方法</a></li>
+                    <li><a href="">- 発注、配送、返品など</a></li>
+                    <li><a href="">- 商品キャンセルについての注意事項</a></li>
+                </ul>
+            </div>
+            <div class="submenu">
+                <h3>3. 商品リストについて</h3>
+                <ul class="hidden">
+                    <li><a href="">- お客様リクエスト</a></li>
+                    <li><a href="">- 現在保持している在庫</a></li>
+                    <li><a href="">- その他の商品</a></li>
+                </ul>
+            </div> 
+        </div>
+        <div style="text-align: center">
+            <!-- <section class="course section">
+                <div class="container">
+                    <h2 class="section-title">Products handled</h2>
+                    <div class="course-wrapper">
+                        <div class="course-item">
+                            <a href=""><img src="images/img5.jpg" alt="建築資材"></a>
+                            <p>architecture</p>
+                        </div>
+                        <div class="course-item">
+                            <a href=""><img src="images/img6.jpg" alt="カジュアル"></a>
+                            <p>casual</p>
+                        </div>
+                        <div class="course-item">
+                            <a href=""><img src="images/img7.jpg" alt="医療品"></a>
+                            <p>medic</p>
+                        </div> -->
+                     </div>
+                  </div>
+            </section>
+            <!-- <div class="modal">
+                    <div class="bigimg"><img src="" alt=""></div>
+                <div><button class="close-btn"><a href=""></a></div> -->
+                  <!-- <button class="close-btn"></button>  -->
+                </div>
+                
+            <img src="images/img5.jpg" id="bigimg">
+         <ul>
+            <img src="images/thumb-img5.jpg" class="thumb" data-image="images/img5.jpg">
+            <img src="images/thumb-img6.jpg" class="thumb" data-image="images/img6.jpg">
+            <img src="images/thumb-img7.jpg" class="thumb" data-image="images/img7.jpg"> 
+            <img src="images/thumb-img8.jpg" class="thumb" data-image="images/img8.jpg">
+         </ul>
+    </div>
+    
+    
+    </section>
+    </div><!-- /.container -->
+    </main>
+
+    <footer>
+    <div class="container">
+    <h1>Rivival</h1>
+    </div><!-- /.container -->
+    </footer> 
+</div>
+
+    <div>
+<nav id="nav">
+    <div class="logo"><img src="logo.svg" alt=""></div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">今月のヒット商品</a></li>
+        <li><a href="#">商品検索</a></li>
+        <li><a href="#">プロ用品検索</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+    </ul>
+</nav>
+
+<script src="../../_common/scripts/jquery-3.4.1.min.js"></script>
+<script>
+'use strict';
+
+$(document).ready(function() {
+    $('#open_nav').on('click', function() {
+        $('#wrapper, #nav').toggleClass('show');
+        $(this).toggleClass('mask');
+    });
+});
+
+$(document).ready(function() {
+    $('.submenu h3').on('click', function() {
+        $(this).next().toggleClass('hidden');
+    });
+});
+const thumbs = document.querySelectorAll('.thumb');
+thumbs.forEach(function(item, index) {
+    item.onclick = function() {
+  document.getElementById('bigimg').src = this.dataset.image;
+    }
+     }); 
+// $(function() { 
+// $('.course-item a').click(function() {
+//         const imgSrc = $(this).children().attr('src');
+//         $('.bigimg').children().attr('src', imgSrc);
+//         $('.modal').fadeIn();
+//         $('body,html').css('overflow-y', 'hidden');
+//         return false
+//       });
+//     });
+
+// $('.close-btn').click(function() {
+//         $('.modal').fadeOut();
+//         $('body,html').css('overflow-y', 'visible');
+//         return false
+//       });
+
+
+
+</script>
+</body>
+</html>

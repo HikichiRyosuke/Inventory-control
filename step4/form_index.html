@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>6-02_drawer</title>
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheet">
+<link href="css/special.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style2.css" media="all" />
+<style>
+    body
+    {
+     margin:0px;          
+     padding:0px;         
+     text-align:center;   
+    }
+    .sidebar{
+        text-align: left;
+    }
+    .submenu h3 {
+        margin: 0 0 1em 0;
+        font-size: 16px;
+        cursor: pointer;
+        color: #e154f1;
+    }
+    .submenu h3:hover {
+        color: #e7fb0b;
+        text-decoration: underline;
+    }
+    .submenu ul {
+        margin: 0 0 1em 0;
+        list-style-type: none;
+        font-size: 14px;
+    }
+    .submenu ul ul{
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    section img {
+    max-width: 100%;
+}
+.center {
+    margin: 0 auto 0 auto;
+    max-width: 90%;
+    width: 500px;
+}
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+li {
+    flex: 1 1 auto;
+    margin-right: 6px;
+}
+li:last-of-type {
+    margin-right: 0;
+}
+.left{
+    text-align: left;
+    margin-right: auto;
+}
+.thumb_img{
+    width: 150px;
+    height: 150px;
+    /* vertical-align: bottom; */
+    /* line-height: 1.00em; */
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0;
+}
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+    body {
+      margin: 0;
+      font-family: 'Bitter', serif;
+      text-align: center;
+    }
+    .holder,
+    .first,
+    .second,
+    .third {
+      height: 20vw;
+      width: 100vw;
+    }
+    .first,
+    .second,
+    .third {
+      position: absolute;
+    }
+    .second,
+    .third {
+      opacity: 0;
+    }
+    .holder {
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+    .first {
+      animation: first 10s infinite;
+      background: linear-gradient(#5ff8ca, #60e08c);
+      z-index: 10;
+    }
+      @keyframes first {
+        0% {opacity: 1.0;}
+        10% {opacity: 0.8;}
+        20% {opacity: 0.6;}
+        30% {opacity: 0.4;}
+        40% {opacity: 0.2;}
+        50% {opacity: 0.1;}
+        60% {opacity: 0.2;}
+        70% {opacity: 0.4;}
+        80% {opacity: 0.6;}
+        90% {opacity: 0.8;}
+        100% {opacity: 1.0;}
+      }
+
+    .second {
+      animation: second 10s infinite; animation-delay: 2s;
+      background: linear-gradient(#19eaa6, #00a1f0);
+      z-index: 20;
+    }
+      @keyframes second {
+        0% {opacity: 0;}
+        10% {opacity: 0.2;}
+        20% {opacity: 0.4;}
+        30% {opacity: 0.6;}
+        40% {opacity: 0.8;}
+        50% {opacity: 1.0;}
+        60% {opacity: 0.8;}
+        70% {opacity: 0.6;}
+        80% {opacity: 0.4;}
+        90% {opacity: 0.2;}
+        100% {opacity: 0;}
+      }
+
+    .third {
+      animation: third 10s infinite;
+      animation-delay: 8s;
+      background: linear-gradient(#aab7f8, #ff75c6);
+      z-index: 30;
+    }
+      @keyframes third {
+        0% {opacity: 0;}
+        10% {opacity: 0.2;}
+        20% {opacity: 0.4;}
+        30% {opacity: 0.6;}
+        40% {opacity: 0.8;}
+        50% {opacity: 1.0;}
+        60% {opacity: 0.8;}
+        70% {opacity: 0.6;}
+        80% {opacity: 0.4;}
+        90% {opacity: 0.2;}
+        100% {opacity: 0;}
+      }
+
+    .txt {
+      margin-top: calc(10vh - 43px);
+      position: absolute;
+      width: 100%;
+      z-index: 1000;
+      color: #333;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 400;
+      margin: 0;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 26px;
+    }
+    
+</style>
+</head>
+<!-- <div class="background">
+    <img src="shizuoka-jpg-1654759074.jpeg">
+</div> -->
+<!-- <div class="header">
+    <img src="pic01-3.png">
+</div> -->
+
+<div id="wrapper">
+  <header>
+    <div class="hamburger" id="open_nav">
+        <!-- <img src="hamburger.png" alt=""> -->
+            <button class="hamburger">
+                <span class="hamburger_bar"></span>
+                <span class="hamburger_bar"></span>
+                <span class="hamburger_bar"></span>
+              </button>
+      </div> 
+    
+    <div class="container">
+     <form>
+        <select onChange="location.href=value;">
+            <option value="#">移動先を選択</option>
+            <option value="hard_index.html">ハードウェア</option>
+            <option value="soft_index.html">ソフトウェア</option>
+            <option value="index.html">トップに戻る</option>
+         </select>
+     </form>
+        <div class="title-block">
+            <h1 style="text-align:center">Inventory control</h1>
+            <h2  style="text-align:center">注文、管理、会計処理を一括化！</h2>
+            <h2 style="text-align:center">日常の一手間中にちょっとしたブレイクタイムを築こう！</h2>            
+         
+                <!-- <div class="button_solid006">
+                  <a href="sam_index.html">building materials</a>
+                  <a href="lum_index.html">food</a>
+                  <a href="sam2_index.html">medic</a>
+                  <a href="sam3_index.html">business</a>
+            </div> -->
+
+           
+
+       
+      </div><!-- /.container -->
+   
+  </header>
+    <main>
+        <div class="sidebar">
+            <h2>はじめに</h2>
+            <div class="submenu">
+                <h3>1. システムに登録する</h3>
+                <ul class="hidden">
+                    <li><a href=" gaiyou_index.html">- 概要</a></li>
+                    <li><a href="inst_index.html">- インストールする</a></li>
+                    <li><a href="login_index.html">- アカウントを登録する</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="submenu">
+                <h3>2. 基本的な使い方</h3>
+                <ul class="hidden">
+                    <li><a href="ctr_index.html">- 基本的な操作方法</a></li>
+                    <li><a href="oddl_index.html">- 発注、配送、返品など</a></li>
+                    <li><a href="can_index.html">- 商品キャンセルについての注意事項</a></li>
+                </ul>
+            </div>
+            <div class="submenu">
+                <h3>3. 商品リストについて</h3>
+                <ul class="hidden">
+                    <li><a href="rqt_index.html">- お客様リクエスト</a></li>
+                    <li><a href="">- 現在保持している在庫</a></li>
+                    <li><a href="">- その他の商品</a></li>
+                </ul>
+            </div> 
+        </div><div class="contact">
+            <h1 class="contact-ttl">Contact</h1>
+
+            <form action="">
+                <table class="contact-table">
+                    <tr>
+                        <th class="contact-item">名前</th>
+                        <td class="contact-body">
+                            <input type="text" name="名前" class="form-text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="contact-item">性別</th>
+                        <td class="contact-body">
+                            <label class="contact-sex">
+                                <input type="radio" name="性別" />
+                                <span class="contact-sex-txt">男</span>
+                            </label>
+                            <label class="contact-sex">
+                                <input type="radio" name="性別" />
+                                <span class="contact-sex-txt">女</span>
+                            </label>
+                        </td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th class="contact-item">メール</th>
+                        <td class="contact-body">
+                            <input type="email" name="メール" class="form-text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="contact-item">電話</th>
+                        <td class="contact-body">
+                            <input type="tel" name="電話" class="form-text" />
+                        </td>
+                    <tr>
+                        <th class="contact-item">職業</th>
+                        <td class="contact-body">
+                            <select name="職業" class="form-select">
+                                <option>選択</option>
+                                <option>学生</option>
+                                <option>主婦</option>
+                                <option>会社員</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- 
+                            > -->
+                    <tr>
+                        <th class="contact-item">お問い合わせ内容</th>
+                        <td class="contact-body">
+                            <textarea name="問い合わせ" class="form-textarea">
+
+                            </textarea>
+                        </td>
+                    </tr>
+                </table>
+
+                <input class="contact-submit" type="submit" value="送信" />
+            </form>
+        </div>
+    </body>
+</html>
+
+        <!-- <div style="text-align: center"> -->
+            <!-- <section class="course section">
+                <div class="container">
+                    <h2 class="section-title">Products handled</h2>
+                    <div class="course-wrapper">
+                        <div class="course-item">
+                            <a href=""><img src="images/img5.jpg" alt="建築資材"></a>
+                            <p>architecture</p>
+                        </div>
+                        <div class="course-item">
+                            <a href=""><img src="images/img6.jpg" alt="カジュアル"></a>
+                            <p>casual</p>
+                        </div>
+                        <div class="course-item">
+                            <a href=""><img src="images/img7.jpg" alt="医療品"></a>
+                            <p>medic</p>
+                        </div> -->
+                     </div>
+                  </div>
+            </section>
+            <!-- <div class="modal">
+                    <div class="bigimg"><img src="" alt=""></div>
+                <div><button class="close-btn"><a href=""></a></div> -->
+                  <!-- <button class="close-btn"></button>  -->
+                </div>
+                
+            <!-- <img src="images/img5.jpg" id="bigimg">
+         <ul>
+            <img src="images/thumb-img5.jpg" class="thumb" data-image="images/img5.jpg">
+            <img src="images/thumb-img6.jpg" class="thumb" data-image="images/img6.jpg">
+            <img src="images/thumb-img7.jpg" class="thumb" data-image="images/img7.jpg"> 
+            <img src="images/thumb-img8.jpg" class="thumb" data-image="images/img8.jpg">
+         </ul>
+    </div> -->
+    
+    
+    </section>
+    </div><!-- /.container -->
+    </main>
+
+    <footer>
+    <div class="container">
+    <h1>Rivival</h1>
+    </div><!-- /.container -->
+    </footer> 
+</div>
+
+    <div><nav id="nav">
+        <div class="buttun2"></div>
+        <!-- <div class="logo"><img src="logo.svg" alt=""></div> -->
+        <h1>メニュー</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">今月のヒット商品</a></li>
+            <li><a href="#">商品検索</a></li>
+            <li><a href="#">プロ用品検索</a></li>
+            <li><a href="form_index.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+<!-- <nav id="nav">
+    <div class="logo"><img src="logo.svg" alt=""></div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">今月のヒット商品</a></li>
+        <li><a href="#">商品検索</a></li>
+        <li><a href="#">プロ用品検索</a></li>
+        <li><a href="form_index.html">お問い合わせ</a></li>
+    </ul>
+</nav> -->
+
+<h2>東京スカイツリー</h2>
+<div class="iframe-wrp">
+<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1619.8314586029835!2d139.8096272718674!3d35.709911798369525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x60188ed7294c99e9%3A0x6bf1a5d958b8f0f!2z5p2x5Lqs6YO95aKo55Sw5Yy65oq85LiK77yR5LiB55uu77yRIOOBqOOBhuOBjeOCh-OBhuOCueOCq-OCpOODhOODquODvOmnhQ!3m2!1d35.7104225!2d139.8091541!4m5!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z44CSMTMxLTAwNDUg5p2x5Lqs6YO95aKo55Sw5Yy65oq85LiK77yR5LiB55uu77yR4oiS77ySIOadseS6rOOCueOCq-OCpOODhOODquODvA!3m2!1d35.7100627!2d139.8107004!5e0!3m2!1sja!2sjp!4v1630742236273!5m2!1sja!2sjp" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<footer>
+    <div class="footer03">
+        <ul class="menu">
+          <li><a href="#">AAAAA</a></li>
+          <li><a href="#">BBBBB</a></li>
+          <li><a href="#">CCCCC</a></li>
+          <li><a href="#">DDDDD</a></li>
+          <li><a href="#">EEEEE</a></li>
+        </ul>
+        <p class="copyright">
+          &copy; Rivival
+        </p>
+      </div>
+      <div class="container">
+        <!-- <h1>Rivival</h1> -->
+        </div><!-- /.container -->
+        </footer> 
+        <script type="text/javascript"></script>
+<script src="../../_common/scripts/jquery-3.4.1.min.js"></script>
+<script>
+'use strict';
+
+
+$(document).ready(function() {
+    $('#open_nav').on('click', function() {
+        $('#wrapper, #nav').toggleClass('show');
+        $(this).toggleClass('mask');
+    });
+});
+
+$(document).ready(function() {
+    $('.submenu h3').on('click', function() {
+        $(this).next().toggleClass('hidden');
+    });
+});
+const thumbs = document.querySelectorAll('.thumb');
+thumbs.forEach(function(item, index) {
+    item.onclick = function() {
+  document.getElementById('bigimg').src = this.dataset.image;
+    }
+     }); 
+     'use strict';
+
+const lang = document.querySelector('html').lang;
+
+switch(lang) {
+    case 'ja':
+        document.querySelector('option[value="index.html"]').selected = true;
+        break;
+    case 'hard':
+        document.querySelector('option[value="hard_index.html"]').selected = true;
+        break;
+    case 'soft':
+        document.querySelector('option[value="soft_index.html"]').selected = true;
+        break;
+}
+
+document.getElementById('form').select.onchange = function() {
+    location.href = document.getElementById('form').select.value;
+}
+
+// $(function() { 
+// $('.course-item a').click(function() {
+//         const imgSrc = $(this).children().attr('src');
+//         $('.bigimg').children().attr('src', imgSrc);
+//         $('.modal').fadeIn();
+//         $('body,html').css('overflow-y', 'hidden');
+//         return false
+//       });
+//     });
+
+// $('.close-btn').click(function() {
+//         $('.modal').fadeOut();
+//         $('body,html').css('overflow-y', 'visible');
+//         return false
+//       });
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="blogの練習をするページです。" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>お問い合わせ</title>
+        <link rel="stylesheet" href="https://tomap.co/ZeroPlusReset.css" />
+        <link rel="stylesheet" href="css/style2.css" media="all" />
+    </head>
+    <body>
+        <div class="contact">
+            <h1 class="contact-ttl">Contact</h1>
+
+            <form action="">
+                <table class="contact-table">
+                    <tr>
+                        <th class="contact-item">名前</th>
+                        <td class="contact-body">
+                            <input type="text" name="名前" class="form-text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="contact-item">性別</th>
+                        <td class="contact-body">
+                            <label class="contact-sex">
+                                <input type="radio" name="性別" />
+                                <span class="contact-sex-txt">男</span>
+                            </label>
+                            <label class="contact-sex">
+                                <input type="radio" name="性別" />
+                                <span class="contact-sex-txt">女</span>
+                            </label>
+                        </td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th class="contact-item">メール</th>
+                        <td class="contact-body">
+                            <input type="email" name="メール" class="form-text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="contact-item">電話</th>
+                        <td class="contact-body">
+                            <input type="tel" name="電話" class="form-text" />
+                        </td>
+                    <tr>
+                        <th class="contact-item">職業</th>
+                        <td class="contact-body">
+                            <select name="職業" class="form-select">
+                                <option>選択</option>
+                                <option>学生</option>
+                                <option>主婦</option>
+                                <option>会社員</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="contact-item">スキル</th>
+                        <td class="contact-body">
+                            <label class="contact-skill">
+                                <input type="checkbox" name="スキル" />
+                                <span class="contact-skill-txt">HTML,CSS</span>
+                            </label>
+                            <label class="contact-skill">
+                                <input type="checkbox" name="スキル" />
+                                <span class="contact-skill-txt">JavaScript,jQuery</span>
+                            </label>
+                            <label class="contact-skill">
+                                <input type="checkbox" name="スキル" />
+                                <span class="contact-skill-txt">WordPress</span>
+                            </label>
+                            <label class="contact-skill">
+                                <input type="checkbox" name="スキル" />
+                                <span class="contact-skill-txt">その他</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="contact-item">お問い合わせ内容</th>
+                        <td class="contact-body">
+                            <textarea name="問い合わせ" class="form-textarea"></textarea>
+                        </td>
+                    </tr>
+                </table>
+
+                <input class="contact-submit" type="submit" value="送信" />
+            </form>
+        </div>
+    </body>
+</html>

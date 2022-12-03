@@ -1,0 +1,545 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>6-02_drawer</title>
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheet">
+<link href="css/special.css" rel="stylesheet">
+<limk href="css/style2.css" rel="stylesheet"></limk>
+<style>
+    body
+    {
+     margin:0px;          
+     padding:0px;         
+     text-align:center; 
+     color: #333;
+    }
+    .sidebar{
+        text-align: left;
+    }
+    .submenu h3 {
+        margin: 0 0 1em 0;
+        font-size: 16px;
+        cursor: pointer;
+        color: #e154f1;
+    }
+    .submenu h3:hover {
+        color: #e7fb0b;
+        text-decoration: underline;
+    }
+    .submenu ul {
+        margin: 0 0 1em 0;
+        list-style-type: none;
+        font-size: 14px;
+    }
+    .submenu ul ul{
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    section img {
+    max-width: 100%;
+}
+.center {
+    margin: 0 auto 0 auto;
+    max-width: 90%;
+    width: 500px;
+}
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+li {
+    flex: 1 1 auto;
+    margin-right: 6px;
+}
+li:last-of-type {
+    margin-right: 0;
+}
+.left{
+    text-align: left;
+    margin-right: auto;
+}
+.thumb_img{
+    width: 150px;
+    height: 150px;
+    /* vertical-align: bottom; */
+    /* line-height: 1.00em; */
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0;
+}
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+    body {
+      margin: 0;
+      font-family: 'Bitter', serif;
+      text-align: center;
+    }
+    .holder,
+    .first,
+    .second,
+    .third {
+      height: 20vw;
+      width: 100vw;
+    }
+    .first,
+    .second,
+    .third {
+      position: absolute;
+    }
+    .second,
+    .third {
+      opacity: 0;
+    }
+    .holder {
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+    .first {
+      animation: first 10s infinite;
+      background: linear-gradient(#5ff8ca, #60e08c);
+      z-index: 10;
+    }
+      @keyframes first {
+        0% {opacity: 1.0;}
+        10% {opacity: 0.8;}
+        20% {opacity: 0.6;}
+        30% {opacity: 0.4;}
+        40% {opacity: 0.2;}
+        50% {opacity: 0.1;}
+        60% {opacity: 0.2;}
+        70% {opacity: 0.4;}
+        80% {opacity: 0.6;}
+        90% {opacity: 0.8;}
+        100% {opacity: 1.0;}
+      }
+
+    .second {
+      animation: second 10s infinite; animation-delay: 2s;
+      background: linear-gradient(#19eaa6, #00a1f0);
+      z-index: 20;
+    }
+      @keyframes second {
+        0% {opacity: 0;}
+        10% {opacity: 0.2;}
+        20% {opacity: 0.4;}
+        30% {opacity: 0.6;}
+        40% {opacity: 0.8;}
+        50% {opacity: 1.0;}
+        60% {opacity: 0.8;}
+        70% {opacity: 0.6;}
+        80% {opacity: 0.4;}
+        90% {opacity: 0.2;}
+        100% {opacity: 0;}
+      }
+
+    .third {
+      animation: third 10s infinite;
+      animation-delay: 8s;
+      background: linear-gradient(#aab7f8, #ff75c6);
+      z-index: 30;
+    }
+      @keyframes third {
+        0% {opacity: 0;}
+        10% {opacity: 0.2;}
+        20% {opacity: 0.4;}
+        30% {opacity: 0.6;}
+        40% {opacity: 0.8;}
+        50% {opacity: 1.0;}
+        60% {opacity: 0.8;}
+        70% {opacity: 0.6;}
+        80% {opacity: 0.4;}
+        90% {opacity: 0.2;}
+        100% {opacity: 0;}
+      }
+
+    .txt {
+      margin-top: calc(10vh - 43px);
+      position: absolute;
+      width: 100%;
+      z-index: 1000;
+      color: #333;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: 400;
+      margin: 0;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 26px;
+    }
+    .left{
+        display: flex;
+    }
+</style>
+</head>
+
+<!-- <div class="holder">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="txt"> -->
+      <!-- <h1>今月のヒット商品</h1>
+      <p>詳しくチェック！！</p>
+    </div>
+  </div>
+  <div class="container">
+    <p class="bound" style="padding-left: 20px;">   
+    <span>Welcome</span>
+    </p>
+  </div> -->
+  
+  <!-- <p><a href="https://1-notes.com/css-bound-animation/" target="_blank" rel="noopener">Have a nice day</a></p>
+<div class="wrapper2">
+    <div class="square" id="elem"></div>
+  </div> -->
+
+
+<div id="wrapper">
+  <header>
+    <div class="hamburger" id="open_nav">
+            <button class="hamburger">
+                <span class="hamburger_bar"></span>
+                <span class="hamburger_bar"></span>
+                <span class="hamburger_bar"></span>
+              </button>
+      </div> 
+         </select>
+     </form>
+        <!-- <div class="title-block">
+            <h1 style="text-align:center">Inventory control</h1>
+            <h2  style="text-align:center">注文、管理、会計処理を一括化！</h2>
+            <h2 style="text-align:center">日常の一手間中にちょっとしたブレイクタイムを築こう！</h2>      -->
+           
+  </header>
+    <main>
+        <!-- <div class="container">
+            <div class="searth"></div>
+         <form action="indexhtml"method = "get">
+            <input type = "search" placeholder = "キーワードを入力">
+            <input type= "submit" name = "submit" value = "検索" > -->
+        <div class="sidebar">
+            <h2>はじめに</h2>
+            <div class="submenu">
+                <h3>1. システムに登録する</h3>
+                <ul class="hidden">
+                    <li><a href="gaiyou_index.html">- 概要</a></li>
+                    <li><a href="inst_index.html">- インストールする</a></li>
+                    <li><a href="login_index.html">- アカウントを登録する</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="submenu">
+                <h3>2. 基本的な使い方</h3>
+                <ul class="hidden">
+                    <li><a href="ctr_index.html">- 基本的な操作方法</a></li>
+                    <li><a href="oddl_index.html">- 発注、配送、返品など</a></li>
+                    <li><a href="can_index.html">- 商品キャンセルについての注意事項</a></li>
+                </ul>
+            </div>
+            <div class="submenu">
+                <h3>3. 商品リストについて</h3>
+                <ul class="hidden">
+                    <li><a href="rqt_index.html">- お客様リクエスト</a></li>
+                    <li><a href="">- 現在保持している在庫</a></li>
+                    <li><a href="">- その他の商品</a></li>
+                </ul>
+            </div> 
+        </div>
+        <div style="text-align: center">
+           
+                     </div>
+                  </div>
+            </section>
+          
+                </div>
+                
+           
+    <head></head>
+<title>商品選択画面</title>
+<body>
+<h1>商品選択画面</h1>
+<div>
+    <button id="minus">-</button>
+    <span id="number">0</span>
+    <button id="plus">+</button>
+</div>
+
+<table id="table">
+<tr>
+<td>個数</td>
+<td>商品名</td>
+<td>権利者</td>
+<td>メーカー</td>
+<td>単価（円）</td>
+<td>合計（円）</td>
+
+</tr>
+
+<tr>
+<td>
+	<select onchange="sum_book(this.options[this.selectedIndex],this)">
+		<option></option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+        <option>10</option>
+        <option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+        <option>20</option>
+	<select></td>
+        <section>
+
+        <div class="buy_img">
+        
+            <div>
+                <h2>美術用　鉛筆</h2>
+                
+                <img src="images/pencil_img02.jpg" width = "500px" height = "500px" id="bigimg">
+                text text text text text text text text text text text text text text text
+            </div>
+            <ul>
+                <li><img src="images/images_pen.jpg" class="thumb_img" data-image="images/images_pen.jpg"></li>
+                <li><img src="images/images.jpg" class="thumb_img" data-image="images/images.jpg"></li>
+                <li><img src="images/pen.jpg" class="thumb_img" data-image="images/pen.jpg"></li>
+                <li><img src="images/pencil_img02.jpg" class="thumb_img" data-image="images/pencil_img02.jpg"></li>
+            </ul>
+        </div>
+    </section>
+<td>鉛筆</td>
+<td>鉛筆</td>
+<td>鉛筆の会社</td>
+<td>100</td>
+<td></td>
+
+
+<tr>
+<td>
+	<select onchange="sum_book(this.options[this.selectedIndex],this)">
+		<option></option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+        <option>10</option>
+        <option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+        <option>20</option>
+	<select>
+</td>
+     <div class="buy_img"> 
+        
+        <div>
+
+          <h2>スケッチブック</h2>
+  
+<!-- <img src="images/mm-S252-P40.jpg"width = "500px" height = "500px" alt = "pp">
+text text text text text text text text text text text text text text text
+</div> -->
+<ul>
+    <li><img src="images/mm-S252-P40.jpg" class="thumb_img" data-image="images/mm-S252-P40"></li>
+    <li><img src="images/818zgBXQGlS._AC_SX466_.jpg" class="thumb_img" data-image="images/818zgBXQGlS._AC_SX466_.jpg"></li>
+    <li><img src="images/7791_1628079425.jpg" class="thumb_img" data-image="images/7791_1628079425.jpg"></li>
+    <li><img src="images/A0225142.jpg" class="thumb_img" data-image="images/A0225142.jpg"></li>
+</ul>
+</div>
+<td>画用紙</td>
+<td>画用紙</td>
+<td>画用紙の会社</td>
+<td>2500</td>
+<td></td>
+</tr>
+
+<tr>
+<td>
+	<select onchange="sum_book(this.options[this.selectedIndex],this)">
+		<option></option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+        <option>10</option>
+        <option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+        <option>20</option>
+	<select>
+</td>
+<div class="buy_img">
+   
+        <h2>フォトフレーム</h2>
+        
+<!-- <img src="images/2044410000371_01_2.jpg"width = "500px" height = "500px" alt = "pp">
+ text text text text text text text text text text text text text text text -->
+<ul>
+    <li><img src="images/2044410000371_01_2.jpg" class="thumb_img" data-image="images/2044410000371_01_2.jpg"></li>
+    <li><img src="images/83359210_o1.jpg" class="thumb_img" data-image="images/images/83359210_o1.jpg"></li>
+    <li><img src="images/watermark.jpg" class="thumb_img" data-image="images/watermark.jpg"></li>
+    <li><img src="images/pease_pease-226.jpg" class="thumb_img" data-image="images/pease_pease-226.jpg"></li>
+</ul>
+</div>
+<td>フォトフレーム</td>
+<td>フォトフレーム</td>
+<td>フォトフレームの会社</td>
+<td>5000</td>
+<td></td>
+</tr>
+</table>
+合計金額(税込):<input type="text" value="" id="text_all_sum">円</br>
+<input type="submit" value="送信">
+<div>
+    <nav id="nav">
+        <div class="buttun2"></div>
+        <!-- <div class="logo"><img src="logo.svg" alt=""></div> -->
+        <h1>メニュー</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">今月のヒット商品</a></li>
+            <li><a href="#">商品検索</a></li>
+            <li><a href="#">プロ用品検索</a></li>
+            <li><a href="form_index.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+<h2>東京スカイツリー</h2>
+<div class="iframe-wrp">
+<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1619.8314586029835!2d139.8096272718674!3d35.709911798369525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x60188ed7294c99e9%3A0x6bf1a5d958b8f0f!2z5p2x5Lqs6YO95aKo55Sw5Yy65oq85LiK77yR5LiB55uu77yRIOOBqOOBhuOBjeOCh-OBhuOCueOCq-OCpOODhOODquODvOmnhQ!3m2!1d35.7104225!2d139.8091541!4m5!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z44CSMTMxLTAwNDUg5p2x5Lqs6YO95aKo55Sw5Yy65oq85LiK77yR5LiB55uu77yR4oiS77ySIOadseS6rOOCueOCq-OCpOODhOODquODvA!3m2!1d35.7100627!2d139.8107004!5e0!3m2!1sja!2sjp!4v1630742236273!5m2!1sja!2sjp" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<footer>
+    <div class="footer03">
+        <ul class="menu">
+          <li><a href="#">AAAAA</a></li>
+          <li><a href="#">BBBBB</a></li>
+          <li><a href="#">CCCCC</a></li>
+          <li><a href="#">DDDDD</a></li>
+          <li><a href="#">EEEEE</a></li>
+        </ul>
+        <p class="copyright">
+          &copy; Rivival
+        </p>
+      </div>
+<div class="container">
+<!-- <h1>Rivival</h1> -->
+</div><!-- /.container -->
+</footer> 
+		<script type="text/javascript">
+
+			function sum_book(item,obj){
+				var sum=item.text*obj.parentNode.parentNode.childNodes[9].innerHTML*1.1; 
+				obj.parentNode.parentNode.childNodes[11].innerHTML=sum;
+				sum_all();
+			}
+			function sum_all(){
+				var table=document.getElementById("table");
+				sum_all_value=0;
+					for(var i=1;i<table.rows.length;i++){
+					var k=table.rows[i].cells[5].innerHTML;
+					sum_all_value=sum_all_value+Number(k);
+					}
+				document.getElementById("text_all_sum").value=sum_all_value;
+			}
+		</script>
+
+</body>
+</html>
+    
+    </section>
+    </div><!-- /.container -->
+    </main>
+
+    
+</div>
+
+
+
+<script src="../../_common/scripts/jquery-3.4.1.min.js"></script>
+<script src = "anime.js"></script>
+<script>
+'use strict';
+
+$(document).ready(function() {
+    $('#open_nav').on('click', function() {
+        $('#wrapper, #nav').toggleClass('show');
+        $(this).toggleClass('mask');
+    });
+});
+
+$(document).ready(function() {
+    $('.submenu h3').on('click', function() {
+        $(this).next().toggleClass('hidden');
+    });
+});
+const thumbs = document.querySelectorAll('.thumb_img');
+thumbs.forEach(function(item, index) {
+    item.onclick = function() {
+  document.getElementById('bigimg').src = this.dataset.image;
+    }
+     }); 
+
+const lang = document.querySelector('html').lang;
+
+
+
+let count = 0;
+    // Elementの取得
+    const number = document.querySelector("#number");
+    const plusBtn = document.querySelector("#plus");
+    const minusBtn = document.querySelector("#minus");
+    plusBtn.onclick = function (event) { // #plusボタンのクリック時のアクションを定義
+        count++; // countに1を加算
+        number.textContent = count; // #numberのテキストを更新
+    };
+    minusBtn.onclick = function (event) { // #minusボタンのクリック時のアクションを定義
+        count--; // countから1を減算
+        number.textContent = count;
+    };
+    
+
+
+
+</script>
+
+</html>
